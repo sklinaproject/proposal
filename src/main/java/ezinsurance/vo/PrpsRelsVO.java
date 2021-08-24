@@ -18,7 +18,7 @@ public class PrpsRelsVO extends DefaultDTO{
     private String  custContRelcd ;   //고객계약관계코드
     private String  custContRelnm ;   //고객계약관계명
     private String  custNo        ;   //고객번호
-    private Integer relpSeq       ;   //관계자순번
+    private Integer prpsRelpSeq   ;   //관계자순번
     private String  custNm        ;   //고객명
     private Integer age           ;   //연령
     private String  gndrCd        ;   //성별코드

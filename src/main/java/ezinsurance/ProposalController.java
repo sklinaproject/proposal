@@ -23,22 +23,21 @@ import java.util.Map;
 
 
     @RequestMapping(value = "/proposals/online", method = RequestMethod.POST)
-    public ResponseEntity<Map<String, Object>> doProposal(@RequestBody HashMap<String, String> userMap) {
+    public ResponseEntity<Map<String, Object>> doProposal(@RequestBody HashMap<String, Object> userMap) {
         
 		
         System.out.println("\n##### doPlan doProposal : " + userMap + "\n");
 
 		Map<String, Object> result = new HashMap<>();
 
-		String  svcId = userMap.get("svcId"); // 서비스ID
-		String  svcfn = userMap.get("svcFn"); // 업무기능
+        String  svcId = (String)userMap.get("svcId"); // 서비스ID
+        String  svcfn = (String)userMap.get("svcFn"); // 업무기능
 
 		DefaultDTO dto = new DefaultDTO();
 
         Executable<?> svc = (Executable<?>)ProposalApplication.applicationContext.getBean(svcId);
 
         dto = (DefaultDTO)svc.execute(userMap);
-
 
 		result.put("data", dto);
         

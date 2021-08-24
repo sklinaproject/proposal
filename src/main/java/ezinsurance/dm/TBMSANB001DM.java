@@ -12,7 +12,11 @@ import ezinsurance.vo.PrpsInfoVO;
 public interface TBMSANB001DM {
 
     PrpsInfoVO selectOneTBMSANB001a(String ppsdsnNo);
+
     List<PrpsInfoVO> selectListTBMSANB001a(String custNo);
 
     int updateOneTBMSANB001a(java.util.Map<String, String> map);
+
+    int insertTBMSANB001a(ezinsurance.vo.PrpsInfoVO prpsInfoVO);
+
 }

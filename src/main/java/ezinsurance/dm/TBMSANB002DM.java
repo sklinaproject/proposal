@@ -15,7 +15,7 @@ public interface TBMSANB002DM {
 
     List<PrpsRelsVO> selectListTBMSANB002a(String ppsdsnNo);
 
-    int updateTBMSANB002a(ezinsurance.vo.PrpsRelsVO planRelsInfo);
+    int updateTBMSANB002a(ezinsurance.vo.PrpsRelsVO prpsRelsInfo);
 
-    int insertTBMSANB002a(ezinsurance.vo.PrpsRelsVO planRelsInfo);
+    int insertTBMSANB002a(ezinsurance.vo.PrpsRelsVO prpsRelsInfo);
 }

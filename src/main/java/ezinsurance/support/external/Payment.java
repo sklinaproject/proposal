@@ -9,6 +9,8 @@ import lombok.Data;
 @Data
 public class Payment {
 
+    private String eventType;
+
     private String prpsNo    ; //청약번호
     private String actDcd    ; //계좌구분코드
     private String custNo    ; //고객번호

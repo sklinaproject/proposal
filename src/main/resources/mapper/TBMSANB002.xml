@@ -8,7 +8,7 @@
 		,cust_cont_relcd   AS custContRelcd   /* 고객계약관계코드 */
 		,cust_cont_relnm   AS custContRelnm   /* 고객계약관계명 */
 		,cust_no           AS custNo          /* 고객번호 */
-		,relp_seq          AS relpSeq         /* 관계자순번 */
+		,prps_relp_seq     AS prpsRelpSeq     /* 관계자순번 */
 		,cust_nm           AS custNm          /* 고객명 */
 		,age               AS age             /* 연령 */
 		,gndr_cd           AS gndrCd          /* 성별코드 */
@@ -31,11 +31,11 @@
 
 	<select id="selectListTBMSANB002a" resultType="ezinsurance.vo.PrpsRelsVO">
 		SELECT
-		prps_no           AS prpsNo          /* 청약번호 */
+		 prps_no           AS prpsNo          /* 청약번호 */
 		,cust_cont_relcd   AS custContRelcd   /* 고객계약관계코드 */
 		,cust_cont_relnm   AS custContRelnm   /* 고객계약관계명 */
 		,cust_no           AS custNo          /* 고객번호 */
-		,relp_seq          AS relpSeq         /* 관계자순번 */
+		,prps_relp_seq     AS prpsRelpSeq     /* 관계자순번 */
 		,cust_nm           AS custNm          /* 고객명 */
 		,age               AS age             /* 연령 */
 		,gndr_cd           AS gndrCd          /* 성별코드 */
@@ -76,7 +76,7 @@
 		AND prps_no = #{prpsNo}
 		AND cust_cont_relcd = #{custContRelcd}
 		AND cust_no = #{custNo}
-		AND relp_seq = #{relp_seq}
+		AND prps_relp_seq = #{prpsRelpSeq}
 	</update>
 
 	<insert id="insertTBMSANB002a" parameterType="ezinsurance.vo.PrpsRelsVO">
@@ -86,7 +86,7 @@
 		,cust_cont_relcd   /* 고객계약관계코드 */
 		,cust_cont_relnm   /* 고객계약관계명 */
 		,cust_no           /* 고객번호 */
-		,relp_seq          /* 관계자순번 */
+		,prps_relp_seq     /* 관계자순번 */
 		,cust_nm           /* 고객명 */
 		,age               /* 연령 */
 		,gndr_cd           /* 성별코드 */
@@ -106,7 +106,7 @@
 		,#{custContRelcd , jdbcType=VARCHAR}  /* 고객계약관계코드 */
 		,#{custContRelnm , jdbcType=VARCHAR}  /* 고객계약관계명 */
 		,#{custNo        , jdbcType=VARCHAR}  /* 고객번호 */
-		,#{relpSeq       , jdbcType=NUMERIC}  /* 관계자순번 */
+		,#{prpsRelpSeq   , jdbcType=NUMERIC}  /* 관계자순번 */
 		,#{custNm        , jdbcType=VARCHAR}  /* 고객명 */
 		,#{age           , jdbcType=NUMERIC}  /* 연령 */
 		,#{gndrCd        , jdbcType=VARCHAR}  /* 성별코드 */

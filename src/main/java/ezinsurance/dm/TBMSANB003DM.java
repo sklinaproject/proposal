@@ -11,11 +11,11 @@ import ezinsurance.vo.PrpsInsVO;
 @Mapper
 public interface TBMSANB003DM {
 
-    PrpsInsVO selectOneTBMSAPL003(String prpsInsNo);
+    PrpsInsVO selectOneTBMSANB003a(String prpsInsNo);
 
-    List<PrpsInsVO> selectListTBMSAPL003(String prpsNo);
+    List<PrpsInsVO> selectListTBMSANB003a(String prpsNo);
 
-    int updateTBMSAPL003(ezinsurance.vo.PrpsInsVO prpsRelsInfo);
+    int updateOneTBMSANB003a(ezinsurance.vo.PrpsInsVO prpsInsInfo);
 
-    int insertTBMSAPL003(ezinsurance.vo.PrpsInsVO prpsRelsInfo);
+    int insertTBMSANB003a(ezinsurance.vo.PrpsInsVO prpsInsInfo);
 }
